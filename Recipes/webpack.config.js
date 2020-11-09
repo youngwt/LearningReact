@@ -5,7 +5,10 @@ module.exports = {
   output: {
     path: path.join(__dirname, "/dist"), // webpack was demanding absolute paths, this does the trick
     filename: "bundle.js",
+    sourceMapFilename: "bundle.map",
   },
+  devtool: "source-map",
+  mode: 'production',
   module: {
     rules: [
       {
@@ -19,11 +22,11 @@ module.exports = {
       },
     ],
   },
-  // I had some issues with webpack not finding fs and something called isexe, 
+  // I had some issues with webpack not finding fs and something called isexe,
   // SO suggested the following:
   resolve: {
     fallback: {
       fs: false,
-    },
+    }
   },
 };
