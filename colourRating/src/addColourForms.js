@@ -10,7 +10,7 @@ class AddColourForms extends Component {
     submit(e) {
         const {_title, _colour} = this.refs;
         e.preventDefault();
-        alert("New Colour ${_title.value} : ${_colour.value}");
+        alert("New Colour {_title.value} : {_colour.value}");
         _title.value = "";
         _colour.value - "#000000";
         _title.focus();

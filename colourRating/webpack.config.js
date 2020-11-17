@@ -8,7 +8,7 @@ module.exports = {
     sourceMapFilename: "bundle.map",
   },
   devtool: "source-map",
-  mode: 'production',
+  mode: 'development',
   module: {
     rules: [
       {

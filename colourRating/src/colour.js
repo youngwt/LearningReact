@@ -1,6 +1,6 @@
-import StarRating from "../../StarRating/src/starRating.js";
+import StarRating from "./starRating.js";
 
-const Colour = ({title, colour, rating=0}) => {
+const Colour = ({title, colour, rating=0}) => 
     <section className="colour">
         <h1>{title}</h1>
         <div className="colour"
@@ -10,6 +10,6 @@ const Colour = ({title, colour, rating=0}) => {
             <StarRating starsSelected={rating} />
         </div>
     </section>
-}
+
 
 export default Colour;

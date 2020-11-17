@@ -1,5 +1,5 @@
 import ColourList from "./colourList";
-import Component from "react";
+import {Component} from "react";
 import { v4 } from "uuid";
 import AddColourForm from "./addColourForms"
 
@@ -8,12 +8,13 @@ export class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            colours : []
+            colours : props.colours
         };
         this.addColour = this.addColour.bind(this);
     }
 
     addColour(title, colour) {
+        console.log("addColour called from app.js")
         const colours = 
             [...this.state.colours,
             {
@@ -31,9 +32,11 @@ export class App extends Component {
         const {colours} = this.state;
         return(
             <div className="app">
-                <AddColourForm onNewColour="{addColour}" />
+                <AddColourForm onNewColour={addColour} />
                 <ColourList colours={colours} />
             </div>
         )
     }
 }
+
+export default App

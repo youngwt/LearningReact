@@ -2,6 +2,8 @@
 import createClass from "create-react-class"
 import PropTypes from 'prop-types'
 
+import Star from "./star"
+
 const StarRating = ({
   starsSelected = 0,
   totalStars = 5,
