@@ -10,7 +10,7 @@ class AddColourForms extends Component {
     submit(e) {
         const {_title, _colour} = this.refs;
         e.preventDefault();
-        alert("New Colour {_title.value} : {_colour.value}");
+        this.props.onNewColour(_title.value, _colour.value)
         _title.value = "";
         _colour.value - "#000000";
         _title.focus();
@@ -21,6 +21,7 @@ class AddColourForms extends Component {
             <form onSubmit={this.submit}>
                 <input ref="_title" type="text" placeholder="colour title..."  required/>
                 <input ref="_colour" type="color" required />
+                <button>Add</button>
             </form>
         );
     }

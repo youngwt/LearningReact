@@ -1,0 +1,24 @@
+.border {
+    border: 1px solid #000000;
+}
+
+.card {
+    width: 200px;
+    box-shadow: 1px 1px 5px 2px #888888;
+    display: inline-block;
+    margin: 5px;
+}
+
+.swatch {
+    height: 100px;
+    width: 200px;
+}
+
+.colour h1 {
+    display: inline-block;
+}
+
+.colour button {
+    float: right;
+}
+
